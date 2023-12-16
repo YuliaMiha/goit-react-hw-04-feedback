@@ -1,13 +1,10 @@
 import PropTypes from 'prop-types';
-import Notification from '../Notification/Notification';
 import s from './Statistics.module.css';
 
 function Statistics({ good, neutral, bad, total, positivePercentage }) {
     // console.log(positivePercentage);
     
-    return total === 0 ? (
-        <Notification message="There is no feedback" />
-      ) : (
+    return  (
         <div className={s.statistics}>
           <p className={s.statistics__text}>Good: {good}</p>
           <p className={s.statistics__text}>Neutral: {neutral}</p>
